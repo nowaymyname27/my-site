@@ -1,0 +1,33 @@
+/* hljs-overrides.css */
+
+.hljs {
+  background: transparent !important;
+  color: #e5e7eb; /* Tailwind gray-200 */
+}
+
+.hljs-keyword,
+.hljs-selector-tag,
+.hljs-literal,
+.hljs-section,
+.hljs-link {
+  color: #f472b6; /* pink-400 */
+}
+
+.hljs-function .hljs-title,
+.hljs-title.function_ {
+  color: #60a5fa; /* blue-400 */
+}
+
+.hljs-string,
+.hljs-doctag {
+  color: #a7f3d0; /* emerald-200 */
+}
+
+.hljs-number {
+  color: #fbbf24; /* amber-400 */
+}
+
+.hljs-comment {
+  color: #9ca3af; /* gray-400 */
+  font-style: italic;
+}

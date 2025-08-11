@@ -1,26 +1,30 @@
 @import "tailwindcss";
+@import "highlight.js/styles/github-dark.css";
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
-}
-
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+@keyframes blob-move-centered {
+  0% {
+    background-position: 40% 50%, 60% 50%;
+  }
+  25% {
+    background-position: 52% 60%, 48% 55%;
+  }
+  50% {
+    background-position: 60% 50%, 45% 45%;
+  }
+  75% {
+    background-position: 50% 45%, 55% 40%;
+  }
+  100% {
+    background-position: 40% 50%, 60% 50%;
   }
 }
 
-body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+.animate-blob-centered {
+  /* Smaller canvas + centered drift = no “scanner” edges */
+  background-size: 180% 180%, 140% 140%;
+  animation: blob-move-centered 10s ease-in-out infinite;
+}
+
+.hljs {
+  background: transparent !important;
 }

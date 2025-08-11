@@ -1,0 +1,52 @@
+[
+  {
+    "id": "neovim-lua",
+    "label": "I code in Neovim btw!",
+    "code": "-- init.lua\\nvim.g.mapleader = \" \"\\n\\n-- My new quitting strategy: only remember <Space>qqq\\nvim.keymap.set(\"n\", \"<leader>qqq\", \"<cmd>wq<cr>\")\\n\\n-- Disable the normal :q command for maximum confusion\\nvim.api.nvim_create_user_command(\"q\", function() end, {})"
+  },
+  {
+    "id": "python-leetcode",
+    "label": "Python LeetCode Expert",
+    "code": "# One-liner that solves all LeetCode problems (locally)\nprint('Accepted')"
+  },
+  {
+    "id": "java-oop",
+    "label": "Java OOP Master",
+    "code": "// Object to extend object to extend object\nclass Main extends Object {\n  public static void main(String[] args) {\n    System.out.println(\"Hello, abstraction!\");\n  }\n}"
+  },
+  {
+    "id": "aws-cost-bill",
+    "label": "AWS Certified",
+    "code": "# Lambda that bills you for checking your bill\nimport boto3, json\n\nce = boto3.client(\"ce\")\n\ndef handler(e, c):\n    cost = ce.get_cost_and_usage(\n        TimePeriod={\"Start\": \"2025-08-01\", \"End\": \"2025-08-02\"},\n        Granularity=\"DAILY\",\n        Metrics=[\"UnblendedCost\"]\n    )\n    return {\n        \"statusCode\": 200,\n        \"body\": json.dumps({\n            \"todayCost\": cost[\"ResultsByTime\"][0][\"Total\"][\"UnblendedCost\"][\"Amount\"],\n            \"billingFee\": \"0.0000002 USD for this query\"\n        })\n    }"
+  },
+  {
+    "id": "react-tailwind",
+    "label": "Front end master!",
+    "code": "// React + Tailwind: code box showing itself\nexport default function InceptionBox() {\n  const code = `<div class=\"rounded border p-2 text-white bg-black\">\\n  {code}\\n</div>`;\n  return (\n    <div className=\"rounded border border-red-500 bg-black p-4 text-white font-mono\">\n      {code}\n    </div>\n  );\n}"
+  },
+  {
+    "id": "chatgpt-api",
+    "label": "Can build you a ChatGPT wrapper!",
+    "code": "// GPT Wrapper Wrapper\\nexport async function wrapperFactory(apiKey) {\\n  const ask = (prompt) =>\\n    fetch(\\\"https://api.openai.com/v1/chat/completions\\\", {\\n      method: \\\"POST\\\",\\n      headers: { \\\"Content-Type\\\": \\\"application/json\\\", Authorization: `Bearer ${apiKey}` },\\n      body: JSON.stringify({ model: \\\"gpt-3.5-turbo\\\", messages: [{ role: \\\"user\\\", content: prompt }] })\\n    }).then(r => r.json()).then(d => d.choices?.[0]?.message?.content?.trim() || \\\"\\\");\\n\\n  return async function makeWrapper(name = \\\"my-gpt-wrapper\\\") {\\n    const spec = `Write a minimal JS function called ${name} that calls GPT with fetch and praises itself.`;\\n    const code = await ask(spec);\\n    return { name, code, run: (prompt) => ask(prompt) };\\n  };\\n}\\n\\n// Example:\\n// const make = await wrapperFactory(process.env.OPENAI_API_KEY);\\n// const w = await make(\\\"betterWrapper\\\"); console.log(w.code);"
+  },
+  {
+    "id": "c-embedded",
+    "label": "Can do Embedded C!",
+    "code": "// RPi: ping me if I leak memory\n#include <stdlib.h>\n#include <stdio.h>\n\nstatic int leaks = 0;\nstatic void ping(void){\n  if (leaks)\n    system(\"notify-send 'Raspberry Pi' 'You leaked memory!' || printf(\\\"LEAK!\\\\n\\\")\");\n}\n\nvoid* mtrack(size_t n){ leaks++; return malloc(n); }\nvoid ftrack(void* p){ if (p){ leaks--; free(p);} }\n\nint main(void){\n  atexit(ping);\n  int *a = mtrack(sizeof *a);   // allocate\n  // ftrack(a);                 // uncomment = no ping\n  return 0;\n}"
+  },
+  {
+    "id": "csharp-unity",
+    "label": "Can make you a game with C#",
+    "code": "// Unity: companion that insists on getting stuck on walls\nusing UnityEngine;\nusing UnityEngine.AI;\n\npublic class ClumsyCompanion : MonoBehaviour {\n  public Transform player;\n  NavMeshAgent agent;\n  void Awake(){ agent = GetComponent<NavMeshAgent>(); agent.autoBraking = false; }\n  void Update(){\n    if(!player) return;\n    // Try to stand shoulder-to-shoulder (into the nearest wall, usually)\n    agent.SetDestination(player.position + player.right * 0.6f);\n    // If basically not moving, \"fix\" it by making the hitbox larger. Perfect.\n    if (agent.velocity.sqrMagnitude < 0.01f) agent.radius = Mathf.Min(agent.radius + 0.02f, 1.2f);\n  }\n}"
+  },
+  {
+    "id": "godot-gdscript",
+    "label": "Can make you a game in GoDot!",
+    "code": "# Godot: object that spins forever because no one told it to stop\nextends Node2D\n\nexport var spin_speed := 720 # degrees per second, obviously too much\n\nfunc _process(delta):\n    rotation_degrees += spin_speed * delta\n    # TODO: maybe add a stop? nah"
+  },
+  {
+    "id": "ocaml-fp",
+    "label": "Functional Programmer!",
+    "code": "(* Recursive identity crisis *)\nlet rec who_am_i depth =\n  if depth = 0 then \"I... I think I'm done asking.\"\n  else (\n    Printf.printf \"Who am I? (depth %d)\\n\" depth;\n    who_am_i (depth - 1)\n  )\n\nlet () =\n  ignore (who_am_i 5);\n  Printf.printf \"Existential crisis resolved. Or is it?\\n\""
+  }
+]

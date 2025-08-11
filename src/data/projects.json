@@ -1,0 +1,18 @@
+[
+  {
+    "slug": "landing-page",
+    "title": "This Website!",
+    "blurb": "Yes this website will have it's full code available for you to see and duplicate if you want to!",
+    "image": "icons/react.svg",
+    "tech": ["React", "Next.js", "Tailwind"],
+    "links": {
+      "code": "https://github.com/yourname/landing-lab"
+    }
+  },
+  {
+    "slug": "Soon!",
+    "title": "More To Come Soon!",
+    "blurb": "I Promise!",
+    "image": "/icons/tab_fox.svg"
+  }
+]
