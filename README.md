@@ -108,7 +108,8 @@ This site is hosted on Vercel.
 ⸻
 
 🔧 Tech Stack
-• Next.js – React framework
-• Tailwind CSS – styling
-• Formspree – contact form handling
-• next-mdx-remote – Markdown/MDX blog
+
+- Next.js – React framework
+- Tailwind CSS – styling
+- Formspree – contact form handling
+- next-mdx-remote – Markdown/MDX blog
