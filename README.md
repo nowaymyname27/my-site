@@ -1,36 +1,111 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# Jose Ramirez – Personal Website
 
-## Getting Started
+This is my personal portfolio site, built with **Next.js 14**, **React**, and **Tailwind CSS 4**.  
+It includes a blog powered by Markdown files, a projects showcase, and a working contact form via [Formspree](https://formspree.io).
 
-First, run the development server:
+---
+
+## ✨ Features
+
+- **Landing Page** – introduction and site navigation.
+- **Projects Page** – filterable project cards with tech tags, live demo, and source links.
+- **Blog** – Markdown-based posts with frontmatter (`title`, `date`, `tags`, `summary`) rendered with `next-mdx-remote`.
+- **Contact Page** – functional form submission via Formspree endpoint.
+- **Navbar & Footer** – consistent layout across pages.
+- **Responsive Design** – fully responsive with TailwindCSS.
+- **Custom Favicon** – located in `/public/tab_fox.svg`.
+
+---
+
+## 📂 Project Structure
+
+src/
+app/
+layout.jsx # Root layout with Navbar & Footer
+page.jsx # Landing page
+projects/
+page.jsx # Projects page
+blog/
+page.jsx # Blog index
+[slug]/
+page.jsx # Dynamic blog post pages
+contact/
+page.jsx # Contact page
+components/
+Navbar.jsx
+Footer.jsx
+Projects.jsx
+ProjectCard.jsx
+data/
+projects.js # Projects data
+posts/ # Markdown blog posts
+lib/
+mdx.js # Helpers for parsing MDX
+public/
+fox.svg # Logo
+tab_fox.svg # Favicon
+
+---
+
+## 🚀 Getting Started
+
+### 1. Install dependencies
 
 ```bash
+npm install
+
+2. Run in development
+
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+
+The site will be available at http://localhost:3000.
+
+3. Build for production
+
+npm run build
+npm start
+
+
+⸻
+
+📝 Writing Blog Posts
+
+Blog posts live in src/data/posts as Markdown (.mdx) files.
+
+Each post must start with frontmatter:
+
+---
+title: My First Post
+date: 2025-08-11
+tags: [personal, dev]
+summary: A short description of the post.
+---
+
+Your blog content here.
+Supports **Markdown** formatting.
+
+
+⸻
+
+📬 Contact Form
+
+The Contact page uses Formspree.
+Update the endpoint in src/app/contact/page.jsx:
+
+const FORMSPREE_ENDPOINT = "https://formspree.io/f/your-id";
+
+
+⸻
+
+🌐 Deployment
+
+This site is hosted on Vercel.
+
+⸻
+
+🔧 Tech Stack
+	•	Next.js – React framework
+	•	Tailwind CSS – styling
+	•	Formspree – contact form handling
+	•	next-mdx-remote – Markdown/MDX blog
 ```
-
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
-
-You can start editing the page by modifying `app/page.js`. The page auto-updates as you edit the file.
-
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
-
-## Learn More
-
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
