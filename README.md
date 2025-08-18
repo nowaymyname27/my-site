@@ -53,18 +53,22 @@ tab_fox.svg # Favicon
 
 ```bash
 npm install
+```
 
-2. Run in development
+### 2. Run in development
 
+```bash
 npm run dev
+```
 
 The site will be available at http://localhost:3000.
 
 3. Build for production
 
+```bash
 npm run build
 npm start
-
+```
 
 ⸻
 
@@ -75,15 +79,16 @@ Blog posts live in src/data/posts as Markdown (.mdx) files.
 Each post must start with frontmatter:
 
 ---
+
 title: My First Post
 date: 2025-08-11
 tags: [personal, dev]
 summary: A short description of the post.
+
 ---
 
 Your blog content here.
 Supports **Markdown** formatting.
-
 
 ⸻
 
@@ -94,7 +99,6 @@ Update the endpoint in src/app/contact/page.jsx:
 
 const FORMSPREE_ENDPOINT = "https://formspree.io/f/your-id";
 
-
 ⸻
 
 🌐 Deployment
@@ -104,8 +108,11 @@ This site is hosted on Vercel.
 ⸻
 
 🔧 Tech Stack
-	•	Next.js – React framework
-	•	Tailwind CSS – styling
-	•	Formspree – contact form handling
-	•	next-mdx-remote – Markdown/MDX blog
+• Next.js – React framework
+• Tailwind CSS – styling
+• Formspree – contact form handling
+• next-mdx-remote – Markdown/MDX blog
+
+```
+
 ```
