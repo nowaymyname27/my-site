@@ -112,7 +112,3 @@ This site is hosted on Vercel.
 • Tailwind CSS – styling
 • Formspree – contact form handling
 • next-mdx-remote – Markdown/MDX blog
-
-```
-
-```
