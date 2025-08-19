@@ -1,5 +1,5 @@
 ---
-title: The Fastes I've Ever Coded, and The Dumbest I've Ever Felt
+title: The Fastest I've Ever Coded, and The Dumbest I've Ever Felt
 date: 2025-08-19
 tags: [personal, AI, React]
 summary: This blog is about how I went from fumbling through React and Tailwind to building a full site in a week with ChatGPT’s help—only to realize that while AI makes me more productive than ever, it also makes me feel like I’m learning less and losing confidence in my growth as a developer.
