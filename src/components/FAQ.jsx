@@ -3,19 +3,19 @@ export default function FAQ() {
   const faqs = [
     {
       q: "What’s your core skill set?",
-      a: "I specialize in React, Next.js, Tailwind CSS, Node.js, and Python, with experience in AWS and SQL.",
+      a: "I build things with React, Next.js, and Tailwind CSS, and I’m comfortable on the backend with Node.js. I’ve also worked with SQL, Docker, and a bit of AWS. In short: I know enough to ship full-stack projects without getting lost.",
     },
     {
       q: "Why should I hire you?",
-      a: "I can code without the assistance of AI, I prefer reading documentation and I write easy to read code.",
+      a: "I like figuring things out the hard way. I’d rather read the docs, experiment, and really understand what’s going on. The result: I write code that’s clean, easy to follow, and doesn’t feel like a black box.",
     },
     {
       q: "How do you work with others?",
-      a: "I focus on clear communication, transparent timelines, and proactive problem-solving to keep projects moving smoothly. I've never had any problems with any co-workers.",
+      a: "I try to keep things simple: communicate clearly, set realistic expectations, and follow through. I just like solving problems with people who care about what they’re building.",
     },
     {
       q: "What value do you add beyond coding?",
-      a: "I am a problem solver at heart, it doesn't always apply specifically to code. I am good at coming up with solutions to big picture stuff as well.",
+      a: "I’m good at stepping back and asking: ‘what’s the actual problem we’re solving?’ Sometimes the answer isn’t more code, it’s a simpler approach, a clearer process, or just not overcomplicating things in the first place.",
     },
   ];
 
